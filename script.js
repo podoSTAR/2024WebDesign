@@ -1,14 +1,16 @@
+//슬라이드 메뉴
 $(".main-menu li").mouseover(function(){
     $(".sub-menu").stop().slideDown();
 }).mouseout(function(){
     $(".sub-menu").stop().slideUp();
 })
-
-$(".tab-title ul  li:first-child").click(function(){
-    $(".gallery .tab-con").hide();
-    $(".con-box .tab-con").show();
+//공지사항 탭 버튼 클릭했을 때
+$(".tab-title2 ul li:first-child").click(function(){
+    $(".notice-con").show();//공지사항을 보여주고
+    $(".gallery-con").hide(); //갤러리를 숨긴다.
 })
-$(".tab-title  ul li:nth-child(2)").click(function(){
-    $(".gallery .tab-con").show();
-    $(".con-box .tab-con").hide();
+//갤러리 탭 버튼을 클릭했을 때
+$(".tab-title2 ul li:nth-child(2)").click(function(){
+    $(".notice-con").hide(); //공지사항을 숨기고
+    $(".gallery-con").show(); //갤러리는 보여준다.  
 })
